@@ -91,6 +91,6 @@ jobs:
     - name: Push Docker image to DockerHub
       run: |
         COMMIT_HASH=$(echo ${{ github.sha }} | cut -c1-7)
-        docker tag docker.io/${{ vars.DOCKER_USERNAME }}/sysfoo:$COMMIT_HASH docker.io/${{ vars.DOCKERHUB_USERNAME }}/sysfoo:latest
+        docker tag docker.io/${{ vars.DOCKER_USERNAME }}/sysfoo:$COMMIT_HASH docker.io/${{ vars.DOCKER_USERNAME }}/sysfoo:latest
         docker push docker.io/${{ vars.DOCKER_USERNAME }}/sysfoo:$COMMIT_HASH
         docker push docker.io/${{ vars.DOCKER_USERNAME }}/sysfoo:latest
